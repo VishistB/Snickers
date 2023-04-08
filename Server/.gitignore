@@ -54,8 +54,5 @@ venv
 privkey.pem
 cert.pem
 
-#docker-compose file
-docker-compose.yml
-
 #error logs
 logs
