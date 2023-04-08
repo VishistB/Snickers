@@ -1,6 +1,15 @@
 import React, { useState, useEffect } from 'react';
 import AgoraRTC from 'agora-rtc-sdk-ng';
 import styles from './vidcall.module.css'
+import ReactDOM from 'react-dom';
+import Countdown from 'react-countdown';
+
+let timePast = parseInt(localStorage.getItem("timePast"))
+if(!timePast){
+    timePast = 0;
+}
+const session_duration= 6
+
 
 const appId = '7d2f6b401f8345ea9b0106cd9907839f'; // Replace with your Agora App ID
 const channelName = 'StudyVerse'; // Replace with your channel name
@@ -38,9 +47,18 @@ const Vidcall= () => {
     };
   }, []);
 
+  const timerTick = () => {
+    timePast += 1000;
+    localStorage.setItem("timePast", timePast)
+}
+
   return (
-    <div>
+    <div>  <div className={styles.counter}>
+    <Countdown date={Date.now() + session_duration*60*1000 - timePast} onTick={timerTick} />
+    
+    </div>
       <div>
+      
         {localTracks.videoTrack ? (
           <div>
             <p>Local Video</p>
@@ -51,6 +69,7 @@ const Vidcall= () => {
         )}
       </div>
       <div>
+      
         {remoteUsers.map(user => (
           <div key={user.uid}>
             <p>Remote User {user.uid}</p>
