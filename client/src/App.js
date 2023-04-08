@@ -13,7 +13,7 @@ function App() {
       {/* <Vidcall/>   */}
       <Feedback/>
       <Dashboard/>
-      <Navbar/>
+      {/* <Navbar/> */}
       
     </div>
   );
