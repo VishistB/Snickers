@@ -1,10 +1,11 @@
 .dashboardwrap{
     display: flex;
     background: #FFF1DC;
-    width: 100vw;
+    width: 96vw;
     height: 100vh;
     justify-content: space-around;
     align-items: center;
+    margin-left: 4vw;
 }
 .uinfocard{
     background: #FFF5F5;
@@ -72,7 +73,23 @@
     margin: 10px 0 0 0;
 }
 .filterwrap{
-    height: 30px;
+    /* height: 35px; */
     width: 100%;
-    background: #FFFFFF;
+    /* background: #FFFFFF; */
+    display: flex;
+    justify-content: flex-end;
 }
+.receimage{
+    height: 220px;
+    margin: 0 5px;
+    border-radius: 10px ;
+}
+.filterinp{
+    height: 30px;
+    margin: auto 5px;
+    border-radius: 10px;
+    border: none;
+    box-shadow: rgba(30, 29, 29, 0.334) 0 5px 5px;
+    padding: 5px;
+}
+

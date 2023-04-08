@@ -1,5 +1,7 @@
 import React from 'react'
 import styles from './dashboard.module.css'
+import lrece from '../../assets/L.jpg'
+import rrece from '../../assets/2.jpg'
 
 function Dashboard() {
     return (
@@ -26,7 +28,8 @@ function Dashboard() {
                         <div className={styles.receresource}>
                             <h2>Recently Attended Sessions</h2>
                             <div className={styles.recerespics}>
-
+                                <img className={styles.receimage} src={rrece}/>
+                                <img className={styles.receimage} src={lrece}/>
                             </div>
                         </div>
                     </div>
@@ -34,8 +37,13 @@ function Dashboard() {
                 <div className={styles.mentorsesdetails}>
                     <div className={styles.innerboardoptions}>
                         <div className={styles.filterwrap}>
-
+                            <h4>Filter</h4>
+                            <input type="text" className={styles.filterinp}/>
                         </div>
+                        <div>
+                            <h2>Upcoming Week</h2>
+                        </div>
+                        <div className={styles.mentorsesdetails}></div>
                     </div>
                 </div>
             </div>

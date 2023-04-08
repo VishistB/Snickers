@@ -2,7 +2,7 @@ import './App.css';
 import Vidcall from './components/Videocall/vidcall';
 import Feedback from './components/Feedback/feedback';
 import Dashboard from './components/Dashboard/Dashboard';
-// import Navbar from './components/Navbar/Navbar';
+import Navbar from './components/Navbar/Navbar';
 
 
 
@@ -11,9 +11,9 @@ function App() {
     <div className="App">
 
       {/* <Vidcall/>   */}
-      <Feedback/>
+      {/* <Feedback/> */}
+      <Navbar/>
       <Dashboard/>
-      {/* <Navbar/> */}
       
     </div>
   );
