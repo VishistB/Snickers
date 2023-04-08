@@ -3,6 +3,7 @@ import Vidcall from './components/Videocall/vidcall';
 import Feedback from './components/Feedback/feedback';
 import Dashboard from './components/Dashboard/Dashboard';
 import Navbar from './components/Navbar/Navbar';
+import Login from './components/LoginPage/Login';
 
 
 
@@ -13,8 +14,10 @@ function App() {
 
       {/* <Vidcall/>   */}
       {/* <Feedback/> */}
-      <Navbar/>
-      <Dashboard/>
+     {/* <Navbar/> */}
+     {/* <Dashboard/> */}
+      <Login/>
+
       
     </div>
   );
