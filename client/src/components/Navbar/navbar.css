@@ -1,0 +1,41 @@
+.navbar {
+    background-color: #000;
+    width: 6%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    overflow-x: hidden;
+    padding-top: 20px;
+  }
+  
+  .navbar-nav {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .nav-item {
+    margin: 20px 0;
+  
+  }
+  
+  .nav-link {
+    display: flex;
+    align-items: center;
+    color: #fff;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 10px;
+  }
+  
+  .nav-link:hover {
+    background-color: #333;
+  }
+  
+  .link-text {
+    margin-left: 10px;
+    font-size: 1.2rem;
+    font-weight: 600;
+  }
+  
