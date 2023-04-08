@@ -1,7 +1,7 @@
 import React from 'react'
-import './feedback.css'
+// import './feedback.css'
 import {Component} from 'react'
-
+import styles from './feedback.module.css'
 
 
 class Feedback extends Component {
@@ -18,17 +18,17 @@ class Feedback extends Component {
         emojis: [
           {
             id: 0,
-            name: '1',
+            name: 'Was the speaker\'s audio clear',
             imageUrl: 'https://assets.ccbp.in/frontend/react-js/sad-emoji-img.png',
           },
           {
             id: 1,
-            name: '2',
+            name: 'Was the session productive',
             imageUrl: 'https://assets.ccbp.in/frontend/react-js/none-emoji-img.png',
           },
           {
             id: 2,
-            name: '3',
+            name: 'On a scale 1-5 will you join again',
             imageUrl: 'https://assets.ccbp.in/frontend/react-js/happy-emoji-img.png',
           },
         ],
@@ -40,19 +40,19 @@ class Feedback extends Component {
     
     const {emojis} = resources
     return (
-      <div className="emojis-container">
+      <div className={styles.emojiscontainer}>
         <h1>
           How satisfied are you with this
           <br />
            Speaker Session?
         </h1>
-        <ul className="emoji-container">
+        <ul className={styles.emojicontainer}>
           {emojis.map(emoji => (
             <li key={emoji.id} className="list-container">
               <button
                 type="button"
                 onClick={this.onChangeResponse}
-                className="button"
+                className={styles.button}
               >
                 <img src={emoji.imageUrl} alt={emoji.name} className="img" />
                 <p>{emoji.name}</p>
@@ -67,7 +67,7 @@ class Feedback extends Component {
   feedBackPage = () => {
     const {resources} = this.props
     return (
-      <div className="tq-container">
+      <div className={styles.tqcontainer}>
         <img src='https://assets.ccbp.in/frontend/react-js/love-emoji-img.png' alt="love emoji" />
 
         <h1>Thank You</h1>
@@ -83,8 +83,8 @@ class Feedback extends Component {
   render() {
     const {isFeedBack} = this.state
     return (
-      <div className="bg-container">
-        <div className="sub-container">
+      <div className={styles.bgcontainer}>
+        <div className={styles.subcontainer}>
           {isFeedBack ? this.originPage() : this.feedBackPage()}
         </div>
       </div>

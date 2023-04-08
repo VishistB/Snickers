@@ -1,4 +1,4 @@
-.bg-container {
+.bgcontainer {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -6,19 +6,19 @@
     background-color: #ffc0bb;
     height: 100vh;
   }
-  .sub-container {
+  .subcontainer {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
   }
-  .emojis-container {
+  .emojiscontainer {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
   }
-  .emoji-container {
+  .emojicontainer {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -27,10 +27,10 @@
     border-width: 0px;
     padding: 35px;
   }
-  .list-container {
+  .listcontainer {
     list-style-type: none;
   }
-  .tq-container {
+  .tqcontainer {
     display: flex;
     flex-direction: column;
     justify-content: center;
