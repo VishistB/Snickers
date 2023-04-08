@@ -4,7 +4,7 @@ import Vidcall from './components/Videocall/vidcall';
 function App() {
   return (
     <div className="App">
-      <Vidcall/>  
+      <Vidcall/>
     </div>
   );
 }
