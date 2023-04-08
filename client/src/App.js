@@ -11,10 +11,10 @@ function App() {
     <div className="App">
 
 
-      {/* <Vidcall/>   */}
+      <Vidcall/>  
       {/* <Feedback/> */}
-      <Navbar/>
-      <Dashboard/>
+      {/* <Navbar/> */}
+      {/* <Dashboard/> */}
       
     </div>
   );
