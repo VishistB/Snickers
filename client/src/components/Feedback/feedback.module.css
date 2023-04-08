@@ -6,18 +6,22 @@
     background-color: #ffc0bb;
     height: 100vh;
   }
+
   .subcontainer {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
   }
+
+  
   .emojiscontainer {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
   }
+
   .emojicontainer {
     display: flex;
     justify-content: center;

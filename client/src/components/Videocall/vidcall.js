@@ -54,7 +54,7 @@ const Vidcall= () => {
 
   return (
     <div>  <div className={styles.counter}>
-    <Countdown date={Date.now() + session_duration*60*1000 - timePast} onTick={timerTick} />
+    <Countdown date={Date.now() + session_duration*60*1000 - timePast} onTick={timerTick}/>
     
     </div>
       <div>
