@@ -1,0 +1,16 @@
+
+
+.top-nav {
+    background-color: #000;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .top-nav h2 {
+    margin: 0;
+    font-size: 2rem;
+    font-weight: bold;
+  }
+  
+
