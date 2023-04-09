@@ -15,7 +15,7 @@ function Register() {
                 <div className={styles.dashboardoptions}>
                     <div className={styles.innerboardoptions}>
                         <h1>
-                        register</h1>
+                        Register</h1>
                         <div>
                             <h2>Account Information</h2>
                             <div className={styles.userdetails}>
@@ -29,7 +29,7 @@ function Register() {
                            
                             
                           
-                            <input type="datetime" id="dob" name="dob" />
+                            <input type="datetime-local" id="dob" name="dob" />
                             <div> <label htmlFor="dob">DOB:</label></div> 
 
                             <input type="password" id="password" name="password" />
