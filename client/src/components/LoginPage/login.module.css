@@ -22,6 +22,7 @@
 .innerboardoptions{
     width: 88%;
     margin: 0 auto;
+    border: None;
 }
 .msessions{
     background: #FFFFFF;
@@ -92,3 +93,4 @@
     margin: 10px 0;
     margin-left: 8vw;
 }
+
