@@ -6,7 +6,7 @@ function Topnav() {
         <div className={styles.Topnavwrap}>
             <h1 className={styles.projname}>Learnify</h1>
             <div className={styles.topnavright}>
-                {/* <h3>Hello Vishist</h3> */}
+                <h3>Hello Vishist</h3>
             </div>
         </div>
     )

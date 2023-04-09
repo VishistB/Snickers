@@ -1,0 +1,52 @@
+.stusessionwrap{
+    display: flex;
+    flex-direction: column;
+    width: 96vw;
+    height: 94vw;
+    margin: 7vh 0 0 4vw;
+    background: #FFF1DC;
+}
+.mainheader{
+    margin: 10px 0 0 10px;
+}
+.bottomhalf{
+    display: flex;
+    width: 100%;
+    margin-top: 30px;
+}
+.lefthalf{
+    display: flex;
+    width: 50vw;
+    flex-direction: column;
+    align-items: center;
+}
+.joinboxes{
+    display: flex;
+}
+.joinbox{
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+    text-align: center;
+    width: 220px;
+    height: 220px;
+    background: white;
+    margin: 10px 10px;
+    border-radius: 10px;
+    box-shadow: rgba(30, 29, 29, 0.334) 0px 5px 5px;
+}
+.righthalf{
+    width: 46vw;
+    height: 80%;
+}
+.instructionbox{
+    width: 70%;
+    height: 80%;
+    border-radius: 10px;
+    background: #F5D6BA;
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    margin:0 auto;
+}
