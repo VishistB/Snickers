@@ -6,6 +6,14 @@ import google from  "../../assets/L-removebg-preview.png"
 import FB from "../../assets/FB-removebg-preview.png"
 import PropTypes from 'prop-types';
 import { useState } from 'react';
+import useToken from '../../useToken';
+import {Routes, Route, useNavigate} from 'react-router-dom';
+import Register from "../RegisterPage/Register";
+
+
+
+
+    
 
 async function loginUser(credentials) {
     return fetch('https://learnify.visionofsid.com/api/auth/login/', {
@@ -21,6 +29,12 @@ async function loginUser(credentials) {
 
    
 function Login({setToken}) {
+  const navigate = useNavigate();
+
+    const navigateregister = () => {
+        navigate('/Register');
+      };
+    
 
   const [email, setEmail] = useState();
   const [password, setPassword] = useState();
@@ -34,7 +48,8 @@ function Login({setToken}) {
       password
     });
     console.log("token",token)
-    setToken(token);
+    localStorage.setItem('token', token.access);
+    navigate('/Dashboard');
   }
     return (
         <>
@@ -56,7 +71,7 @@ function Login({setToken}) {
                             <a>Forgot Password</a>
                         </div>
                         <button className={styles.logbtn} onClick={handleSubmit}>LOGIN</button>
-                        <p>Don't have an Account? sign up here</p>
+                        <p>Don't have an Account? <button onClick={navigateregister}>sign up here</button></p>
                     </div>
                 </div>
                 <div className={styles.flexright}>

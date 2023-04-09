@@ -13,12 +13,10 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import useToken from "./useToken";
 
 
+
 function App() {
     const [vidbool, setVidbool] = useState(true);
-  const { token, setToken } = useToken();
-  if(!token) {
-    return <Login setToken={setToken} />
-  }
+ 
     
     
     return (
@@ -33,7 +31,7 @@ function App() {
                     <Route path="/StudySession" element={<StudySession/>} />
                     <Route path="/Vidcall" element={<Vidcall/>} />
                     <Route path="/Login" element={<Login/>} />
-                    <Route path="/t" element={<Register/>} />
+                    <Route path="/Register" element={<Register/>} />
                 </Routes>
             </Router>
         </div>

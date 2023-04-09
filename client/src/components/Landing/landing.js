@@ -4,7 +4,17 @@ import logo from "../../assets/LEARNIFY_LOGO.png";
 import { Link } from "react-router-dom";
 import { FaHome, FaUserFriends, FaBook, FaPuzzlePiece, FaEnvelope } from 'react-icons/fa';
 import backgroundImage from '../../assets/13_1.png';
+import {Routes, Route, useNavigate} from 'react-router-dom';
+
+
+
 function Landing() {
+    const navigate = useNavigate();
+
+    const navigatelogin = () => {
+        navigate('/Login');
+      };
+
     return (
         <div className={styles.landingwrap} style={{backgroundImage: `url(${backgroundImage})`, backgroundSize:"cover" }}>
             <div className={styles.tempnav} >
@@ -51,7 +61,7 @@ function Landing() {
                 <div className={styles.mainheaders}>
                 <h1 className={styles.massivetext}>LEARNIFY</h1>
                 <h1 className={styles.submassivetext}>REVOLUTIONISING EDUCATION</h1>
-                <button className={styles.loginbtn}>SIGN UP</button>
+                <button className={styles.loginbtn} onClick={navigatelogin}>LOGIN !</button>
                 </div>
             </div>
             <div className={styles.secondlandingwrap}>
