@@ -8,7 +8,7 @@ import PropTypes from 'prop-types';
 import { useState } from 'react';
 
 async function loginUser(credentials) {
-    return fetch('http://learnify.visionofsid.com/auth/login/', {
+    return fetch('https://learnify.visionofsid.com/api/auth/login/', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'

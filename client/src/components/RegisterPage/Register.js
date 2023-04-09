@@ -3,7 +3,7 @@ import styles from './register.module.css'
 import registerimg from '../../assets/89192-startup-man-in-front-of-phone-and-rocket@2x.png'
 import  { useState } from "react";
 
-const api_url="learnify.visionofsid.com/auth/register/"
+const api_url="https://learnify.visionofsid.com/api/auth/register/"
 
 const Register = () => {
   const [email, setEmail] = useState("");
