@@ -13,7 +13,7 @@ TYPE_CHOICES = [
 ]
 
 class Session(models.Model):
-    slug = models.UUIDField(primary_key=True, default=uuid.uuid4())
+    slug = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
     topic = models.CharField(max_length=200)
 
     type = models.CharField(max_length=2, choices=TYPE_CHOICES, default='PB')
