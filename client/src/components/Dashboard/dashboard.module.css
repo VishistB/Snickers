@@ -13,6 +13,9 @@
     height: 80%;
     border-radius: 10px;
 }
+.picneditprof{
+    display: flex;
+}
 .dashboardoptions{
     display: flex;
     /* background: #6a742223; */

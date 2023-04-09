@@ -8,7 +8,13 @@ function Dashboard() {
     return (
         <>
             <div className={styles.dashboardwrap}>
-                <div className={styles.uinfocard}></div>
+                <div className={styles.uinfocard}>
+                    <div className={styles.picneditprof}>
+                        <div>
+
+                        </div>
+                    </div>
+                </div>
                 <div className={styles.dashboardoptions}>
                     <div className={styles.innerboardoptions}>
                         <h1>DASHBOARD</h1>
