@@ -3,7 +3,6 @@ import AgoraRTC from "agora-rtc-sdk-ng";
 import styles from "./vidcall.module.css";
 import ReactDOM from "react-dom";
 import Countdown from "react-countdown";
-// import { useNavigate } from "react-router-dom";
 
 let timePast = parseInt(localStorage.getItem("timePast"));
 if (!timePast) {
@@ -20,6 +19,7 @@ const client = AgoraRTC.createClient({ codec: "h264", mode: "rtc" });
 const localTracksState = { videoTrack: null, audioTrack: null };
 
 const Vidcall = () => {
+
     const [remoteUsers, setRemoteUsers] = useState([]);
     const [localTracks, setLocalTracks] = useState(localTracksState);
 
@@ -61,20 +61,32 @@ const Vidcall = () => {
         localStorage.setItem("timePast", timePast);
     };
 
+    useEffect(() => {
+        const handleVisibilityChange = () => {
+            if (document.visibilityState === "visible") {
+                alert("Tab switched!");
+            }
+        };
+
+        document.addEventListener("visibilitychange", handleVisibilityChange);
+
+        return () => {
+            document.removeEventListener("visibilitychange", handleVisibilityChange);
+        };
+    }, []);
+
     return (
         <div className={styles.vidcallwrap}>
             <div>
-            <div className={styles.counter}>
-            <Countdown 
-                date={Date.now() + session_duration * 60 * 1000 - timePast}
-                onTick={timerTick} onComplete={() => {
-                    
-                    
-                   
-                }
-                }
-            />
-        </div>
+                <div className={styles.counter}>
+                    <Countdown 
+                        date={Date.now() + session_duration * 60 * 1000 - timePast}
+                        onTick={timerTick}
+                        onComplete={() => {
+                            // Handle session completion here
+                        }}
+                    />
+                </div>
                 <p>SESSION LIVE</p>
                 {localTracks.videoTrack ? (
                     <div className={styles.videoboxwrap}>
