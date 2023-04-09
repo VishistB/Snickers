@@ -9,9 +9,23 @@ import Register from "./components/RegisterPage/Register";
 import Topnav from "./components/Navbar/Topnav";
 import StudySession from "./components/Studysession/StudySession";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import useToken from "./useToken";
+// function setToken(userToken) {
+//   sessionStorage.setItem('token', JSON.stringify(userToken));
+// }
+
+// function getToken() {
+//   const tokenString = sessionStorage.getItem('token');
+//   const userToken = JSON.parse(tokenString);
+//   return userToken?.token
+// }
 
 function App() {
-    const [vidbool, setvidbool] = useState(true);
+  const { token, setToken } = useToken();
+  if(!token) {
+    return <Login setToken={setToken} />
+  }
+    
     return (
         <div className="App">
             {/* <button onClick={()=>setvidbool(!vidbool)} style={{margin:"0 auto", width:"100vw",height:"20px"}}/> */}
@@ -35,7 +49,9 @@ function App() {
             <Router>
                 <Navbar/>
                 <Topnav/>
+                
                 <Routes>
+                
                     <Route exact path="/" element={<Dashboard/>} />
                     <Route path="/StudySession" element={<StudySession/>} />
                     <Route path="/Vidcall" element={<Vidcall/>} />
@@ -44,6 +60,7 @@ function App() {
                 </Routes>
                 {/* <Footer/> */}
             </Router>
+           
         </div>
     );
 }

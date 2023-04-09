@@ -3,7 +3,7 @@ import styles from './register.module.css'
 import registerimg from '../../assets/89192-startup-man-in-front-of-phone-and-rocket@2x.png'
 import  { useState } from "react";
 
-const api_url=""
+const api_url="learnify.visionofsid.com/auth/register/"
 
 const Register = () => {
   const [email, setEmail] = useState("");
@@ -65,7 +65,7 @@ const Register = () => {
     formData.append("company", company);
     formData.append("university", university);
 
-    const response = await fetch(api_url+"/auth/register", {
+    const response = await fetch(api_url, {
       method: "POST",
       body: formData,
     });
