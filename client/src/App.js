@@ -31,7 +31,7 @@ function App() {
       )
       } */}
       <Topnav/>
-      <Navbar/>
+      <Vidcall/>
       <Login/>
     </div>
   );
