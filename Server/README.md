@@ -24,6 +24,9 @@ Clone the project
 Go to the project directory
 
 
+Create an empty folder name "logs"
+
+
 We recommend you to use virtual environment
 
 ```bash
