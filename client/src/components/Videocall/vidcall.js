@@ -4,11 +4,17 @@ import styles from "./vidcall.module.css";
 import ReactDOM from "react-dom";
 import Countdown from "react-countdown";
 
+
+const session_duration = 6;
+
 let timePast = parseInt(localStorage.getItem("timePast"));
 if (!timePast) {
-    timePast = 0;
+    timePast = timePast;
 }
-const session_duration = 6;
+else{
+    timePast = timePast+1;
+}
+
 
 const appId = "7d2f6b401f8345ea9b0106cd9907839f";
 const channelName = "StudyVerse";
