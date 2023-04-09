@@ -4,6 +4,7 @@ import Feedback from './components/Feedback/feedback';
 import Dashboard from './components/Dashboard/Dashboard';
 import Navbar from './components/Navbar/Navbar';
 import Login from './components/LoginPage/Login';
+import Register from './components/RegisterPage/Register';
 
 
 
@@ -15,6 +16,8 @@ function App() {
       <Navbar/>
       <Dashboard/>
       <Login/>
+      <Register/>
+      
     </div>
   );
 }

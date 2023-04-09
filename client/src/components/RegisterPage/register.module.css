@@ -1,0 +1,94 @@
+.registerwrapper {
+    display: flex;
+    background: #FFF1DC;
+    width: 96vw;
+    height: 100vh;
+    justify-content: space-around;
+    align-items: center;
+    margin-left: 4vw;
+}
+.uinfocard{
+    background: #FFF5F5;
+    width: 350px;
+    height: 80%;
+    border-radius: 10px;
+}
+
+.mentorsesdetails{
+    background: #6a74221c;
+    width: 400px;
+    height: 80%;
+}
+.innerboardoptions{
+    width: 88%;
+    margin: 0 auto;
+}
+.msessions{
+    background: #FFFFFF;
+    width: 100%;
+    height: 10%;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 10px;
+    margin: 20px 0;
+    box-shadow: rgba(30, 29, 29, 0.334) 0px 5px 5px;
+}
+.square1{
+    width: 50px;
+    height: 50px;
+    background: #FFF1DC;
+    margin: auto 2%;
+    border-radius: 5px;
+}
+.studyrooms{
+    background: #FFFFFF;
+    width: 100%;
+    height: 10%;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 10px;
+    margin: 20px 0;
+    box-shadow: rgba(30, 29, 29, 0.334) 0px 5px 5px;
+}
+.square2{
+    width: 50px;
+    height: 50px;
+    background: #53917E;
+    margin: auto 2%;
+    border-radius: 5px;
+}
+.receresource{
+    display: flex;
+    flex-direction: column;
+
+}
+.recerespics{
+    display: flex;
+    margin: 10px 0 0 0;
+}
+.filterwrap{
+    /* height: 35px; */
+    width: 100%;
+    /* background: #FFFFFF; */
+    display: flex;
+    justify-content: flex-end;
+}
+
+.userdetails {
+    background-color: white;
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+.spacer{
+    height: 3vh;
+
+}
+.subutton{
+    background-color: #FFF1DC;
+    border-radius: 5px;
+    border-width: 0px;
+    padding: 10px;
+    margin: 10px 0;
+    margin-left: 8vw;
+}
