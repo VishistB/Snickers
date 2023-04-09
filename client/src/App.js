@@ -6,6 +6,7 @@ import Navbar from './components/Navbar/Navbar';
 import Login from './components/LoginPage/Login';
 import { useState } from 'react';
 import Register from './components/RegisterPage/Register';
+import Topnav from './components/Navbar/Topnav';
 
 
 
@@ -19,6 +20,7 @@ function App() {
       <Vidcall/>):
       (
       <>  
+      <Topnav/>
       <Navbar/>
       <Dashboard/>
       <Login/>

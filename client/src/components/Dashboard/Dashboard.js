@@ -2,17 +2,43 @@ import React from "react";
 import styles from "./dashboard.module.css";
 import lrece from "../../assets/L.jpg";
 import rrece from "../../assets/2.jpg";
-import sessiondata from './sessiondata.json'
-
+import sessiondata from "./sessiondata.json";
+import {FaGift} from "react-icons/fa"
+import {IoChatbubblesOutline} from 'react-icons/io5'
 function Dashboard() {
     return (
         <>
             <div className={styles.dashboardwrap}>
                 <div className={styles.uinfocard}>
                     <div className={styles.picneditprof}>
-                        <div>
-
+                        <div className={styles.profilecircle}></div>
+                        <div className={styles.namenedit}>
+                            <h3 className={styles.nameheader}>
+                                VISHIST BHAGABATI
+                            </h3>
+                            <button className={styles.editbtn}>
+                                EDIT PROFILE
+                            </button>
                         </div>
+                    </div>
+                    <div className={styles.learningstat}>
+                        <h2>LEARNING STATS</h2>
+                        <div className={styles.statitem}>
+                            <FaGift/>
+                            <h3>CURRENT POINTS:860</h3>
+                        </div>
+                        <div className={styles.statitem}>
+                            <IoChatbubblesOutline/>
+                            <h3>CURRENT POINTS:860</h3>
+                        </div>
+                        <div className={styles.statitem}>
+                            <h3>hiw
+                            </h3>
+                            <h3>CURRENT POINTS:860</h3>
+                        </div>
+                    </div>
+                    <div>
+                        
                     </div>
                 </div>
                 <div className={styles.dashboardoptions}>
@@ -46,15 +72,14 @@ function Dashboard() {
                             <h2>Upcoming Week</h2>
                         </div>
                         <div className={styles.mentorseslist}>
-                            <div className={styles.mentorseshead}>
-                            </div>
+                            <div className={styles.mentorseshead}></div>
                             {sessiondata.map((item) => (
-                                    <div className={styles.mentorsesent}>
-                                        <h5>{item.start_date}</h5>
-                                        {/* <p>{item.start_time}</p> */}
-                                        {/* <p>{item.course_title}</p> */}
-                                    </div>
-                            ))} 
+                                <div className={styles.mentorsesent}>
+                                    <h5>{item.start_date}</h5>
+                                    {/* <p>{item.start_time}</p> */}
+                                    {/* <p>{item.course_title}</p> */}
+                                </div>
+                            ))}
                         </div>
                     </div>
                 </div>

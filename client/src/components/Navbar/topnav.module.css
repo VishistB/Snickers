@@ -1,0 +1,23 @@
+.Topnavwrap{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width:96vw;
+    height: 7vh;
+    margin-left:4vw;
+    background: #F5D6BA;
+    position: fixed;
+    top: 0;
+    margin-top: rgba(30, 29, 29, 0.334) solid 1;
+    margin-bottom: rgba(30, 29, 29, 0.334) solid 1;
+    box-shadow: 0 0 5px 0;
+}
+.topnavright{
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+.projname{
+    color: #4C191B;
+    margin-left: 2vw;
+}
