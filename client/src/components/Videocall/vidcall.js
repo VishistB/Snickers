@@ -3,6 +3,7 @@ import AgoraRTC from "agora-rtc-sdk-ng";
 import styles from "./vidcall.module.css";
 import ReactDOM from "react-dom";
 import Countdown from "react-countdown";
+import { useNavigate } from "react-router-dom";
 
 let timePast = parseInt(localStorage.getItem("timePast"));
 if (!timePast) {
@@ -63,6 +64,17 @@ const Vidcall = () => {
     return (
         <div className={styles.vidcallwrap}>
             <div>
+            <div className={styles.counter}>
+            <Countdown 
+                date={Date.now() + session_duration * 60 * 1000 - timePast}
+                onTick={timerTick} onComplete={() => {
+                    
+                    
+                   
+                }
+                }
+            />
+        </div>
                 <p>SESSION LIVE</p>
                 {localTracks.videoTrack ? (
                     <div className={styles.videoboxwrap}>
