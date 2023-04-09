@@ -9,7 +9,7 @@ services:
     ports: 
       - "8376:8376"
     volumes:
-      - ./static/:/app/static/
+      - ./api/static/:/app/api/static/
       - ./logs/:/app/logs/
-      - ./media/:/app/media/
+      - ./api/media/:/app/api/media/
     network_mode: host
