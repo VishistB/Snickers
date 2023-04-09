@@ -32,7 +32,7 @@ function App() {
       } */}
       <Topnav/>
       <Navbar/>
-      <StudySession/>
+      <Login/>
     </div>
   );
 }

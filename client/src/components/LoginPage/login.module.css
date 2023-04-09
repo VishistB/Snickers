@@ -3,94 +3,75 @@
     background: #FFF1DC;
     width: 96vw;
     height: 100vh;
-    justify-content: space-around;
+    /* justify-content: space-around; */
     align-items: center;
     margin-left: 4vw;
+    margin-top: 7vh;
 }
-.uinfocard{
-    background: #FFF5F5;
-    width: 350px;
-    height: 80%;
-    border-radius: 10px;
-}
-
-.mentorsesdetails{
-    background: #6a74221c;
-    width: 400px;
-    height: 80%;
-}
-.innerboardoptions{
-    width: 88%;
-    margin: 0 auto;
-    border: None;
-}
-.msessions{
-    background: #FFFFFF;
-    width: 100%;
-    height: 10%;
-    display: flex;
-    justify-content: space-between;
-    border-radius: 10px;
-    margin: 20px 0;
-    box-shadow: rgba(30, 29, 29, 0.334) 0px 5px 5px;
-}
-.square1{
-    width: 50px;
-    height: 50px;
-    background: #FFF1DC;
-    margin: auto 2%;
-    border-radius: 5px;
-}
-.studyrooms{
-    background: #FFFFFF;
-    width: 100%;
-    height: 10%;
-    display: flex;
-    justify-content: space-between;
-    border-radius: 10px;
-    margin: 20px 0;
-    box-shadow: rgba(30, 29, 29, 0.334) 0px 5px 5px;
-}
-.square2{
-    width: 50px;
-    height: 50px;
-    background: #53917E;
-    margin: auto 2%;
-    border-radius: 5px;
-}
-.receresource{
+.flexleft{
     display: flex;
     flex-direction: column;
-
+    align-items: center;
+    width: 50%;
+    height: 100%;
+    /* background: rgba(255, 0, 0, 0.127); */
 }
-.recerespics{
+.loginbox{
+    display:flex;
+    background: white;
+    flex-direction: column;
+    align-items: center;
+    height: 500px;
+    width: 450px;
+    border-radius: 10px;
+}
+.flexright{
+    width: 50%;
+    height: 100%;
+    /* background: rgba(0, 0, 255, 0.138); */
     display: flex;
-    margin: 10px 0 0 0;
+    justify-content: center;
+    align-items: center;
 }
-.filterwrap{
-    /* height: 35px; */
-    width: 100%;
-    /* background: #FFFFFF; */
+.authbtn{
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
+    align-items: center;
+    background: #F5D6BA;
+    margin: 0 10px;
+    border: none;
+    font-size: 1.2rem;
+    padding: 2px;
+}
+.twoauthbtns{
+    display: flex;
+}
+.logbtn{
+    background: #F5D6BA;
+    width: 200px;
+    margin: 0 20px;
+    border: none;
+    font-size: 1.2rem;
+    padding: 2px;  
+}
+.line{
+    height: 0.1px;
+    border-top:1px solid black;
+    width: 70%;
+    margin-bottom: 40px;
+}
+.inpfield{
+    width: 65%;
+    height: 30px;
+    margin: 20px 0;
+    background: #D9D9D9;
+    border: none;
+}
+.remandforg{
+    display: flex;
+    width: 80%;
+    justify-content: space-between;
+    align-items: center;
 }
 
-.userdetails {
-    background-color: white;
-    padding: 10px;
-    border-radius: 5px;
-    margin-top: 20px;
-}
-.spacer{
-    height: 3vh;
-
-}
-.subutton{
-    background-color: #FFF1DC;
-    border-radius: 5px;
-    border-width: 0px;
-    padding: 10px;
-    margin: 10px 0;
-    margin-left: 8vw;
-}
 
