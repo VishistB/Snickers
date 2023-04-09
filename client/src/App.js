@@ -30,9 +30,9 @@ function App() {
       </>
       )
       } */}
-      <Topnav/>
+      {/* <Topnav/> */}
       <Vidcall/>
-      <Login/>
+      {/* <Login/> */}
     </div>
   );
 }

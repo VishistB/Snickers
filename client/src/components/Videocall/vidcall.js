@@ -64,7 +64,7 @@ const Vidcall = () => {
     useEffect(() => {
         const handleVisibilityChange = () => {
             if (document.visibilityState === "visible") {
-                alert("Tab switched!");
+                alert("Tab switched Let's not get distracted shall we?");
             }
         };
 
@@ -78,15 +78,6 @@ const Vidcall = () => {
     return (
         <div className={styles.vidcallwrap}>
             <div>
-                <div className={styles.counter}>
-                    <Countdown 
-                        date={Date.now() + session_duration * 60 * 1000 - timePast}
-                        onTick={timerTick}
-                        onComplete={() => {
-                            // Handle session completion here
-                        }}
-                    />
-                </div>
                 <p>SESSION LIVE</p>
                 {localTracks.videoTrack ? (
                     <div className={styles.videoboxwrap}>
@@ -101,13 +92,22 @@ const Vidcall = () => {
                     <p>This will just take a moment..</p>
                 )}
             </div>
-            <div>
-                {remoteUsers.map((user) => (
+            <div className={styles.counterwrap}>
+                {/* {remoteUsers.map((user) => (
                     <div key={user.uid}>
                         <p>Remote User {user.uid}</p>
                         <div ref={(v) => v && user.videoTrack.play(v)} />
                     </div>
-                ))}
+                ))} */}
+                <div className={styles.counter}>
+                    <Countdown 
+                        date={Date.now() + session_duration * 60 * 1000 - timePast}
+                        onTick={timerTick}
+                        onComplete={() => {
+                            // Handle session completion here
+                        }}
+                    />
+                </div>
             </div>
         </div>
     );
