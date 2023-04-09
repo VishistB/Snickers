@@ -3,7 +3,7 @@ import AgoraRTC from "agora-rtc-sdk-ng";
 import styles from "./vidcall.module.css";
 import ReactDOM from "react-dom";
 import Countdown from "react-countdown";
-import { useNavigate } from "react-router-dom";
+// import { useNavigate } from "react-router-dom";
 
 let timePast = parseInt(localStorage.getItem("timePast"));
 if (!timePast) {
