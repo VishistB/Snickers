@@ -43,7 +43,7 @@ function Register() {
                     </div>
                         </div>
                         <div className={styles.msessions}>
-                            <button className={styles.subutton}>   Submit</button>
+                            <button className={styles.subutton}> Submit</button>
                             
                         </div>
                            
