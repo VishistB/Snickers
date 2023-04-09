@@ -5,7 +5,7 @@ import logo from '../../assets/logo1-removebg-preview.png'
 const Navbar = () => {
   return (
     <nav className={styles.navbar}>
-      <img src={logo} style={{width:"48px"}}/>
+      <img src={logo} style={{width:"52px", margin:"0 auto"}}/>
       <ul className={styles.navbarnav}>
         <li className={styles.navitem}>
           <a href="#" className={styles.navlink}>

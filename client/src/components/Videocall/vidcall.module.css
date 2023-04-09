@@ -1,6 +1,7 @@
 .vidcallwrap{
     height: 100vh;
     width: 100vw;
+    /* margin-left: 4vw; */
     background: beige;
     display: flex;
 }
