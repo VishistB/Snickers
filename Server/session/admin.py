@@ -41,13 +41,13 @@ class ReportResource(ModelResource):
     
     class Meta:
         model = Report
-        fields = ('id', 'points', 'of')
+        fields = ('id', 'session', 'param1', 'param2', 'param3')
 
 
 class ReportModelAdmin(ImportExportModelAdmin):
     resource_class = ReportResource
 
-    list_display = ('id', 'rating', 'of')
+    list_display = ('id', 'session', 'param1', 'param2', 'param3')
     list_per_page = 100
 
 

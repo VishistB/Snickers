@@ -40,16 +40,21 @@ class Feedback(models.Model):
     param2 = models.IntegerField()
     param3 = models.IntegerField()
 
+    is_visited = models.BooleanField(default=False)
+
     def __str__(self):
-        return f"{self.by.email}_{self.of.topic}"
+        return f"{self.session.topic}_{self.user.name}"
 
 
 class Report(models.Model):
-    rating = models.DecimalField(decimal_places=5, max_digits=10)
-    of = models.ForeignKey(Session, on_delete=models.CASCADE)
+    session = models.ForeignKey(Session, on_delete=models.CASCADE)
+
+    param1 = models.DecimalField(max_digits=20, decimal_places=18)
+    param2 = models.DecimalField(max_digits=20, decimal_places=18)
+    param3 = models.DecimalField(max_digits=20, decimal_places=18)
 
     def __str__(self):
-        return f"{self.of.topic}"
+        return f"{self.session.topic}"
 
 
 class AgoraToken(models.Model):
