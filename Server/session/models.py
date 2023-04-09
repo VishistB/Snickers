@@ -33,10 +33,12 @@ class Session(models.Model):
 
 
 class Feedback(models.Model):
-    of = models.ForeignKey(Session, on_delete=models.CASCADE)
-    by = models.ForeignKey(User, on_delete=models.CASCADE)
+    session = models.ForeignKey(Session, on_delete=models.CASCADE)
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
 
-    points = models.IntegerField()
+    param1 = models.IntegerField()
+    param2 = models.IntegerField()
+    param3 = models.IntegerField()
 
     def __str__(self):
         return f"{self.by.email}_{self.of.topic}"

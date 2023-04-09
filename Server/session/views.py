@@ -2,7 +2,7 @@ from rest_framework.permissions import IsAuthenticated
 from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework import status
-from .models import Session, AgoraToken
+from .models import Session, AgoraToken, Feedback
 from .serializers import SessionSerializer
 
 from .agora_tokens import createToken
@@ -71,3 +71,27 @@ class GenerateToken(APIView):
             }, status=status.HTTP_200_OK)
 
         return Response(createToken(session, user), status=status.HTTP_200_OK)
+
+
+class FeedbackForm(APIView):
+    permission_classes = [IsAuthenticated]
+
+    def post(self, request):
+        session_slug = request.data.get('slug')
+        session = Session.objects.filter(slug=session_slug).first()
+
+        user = request.user
+
+        if session is None:
+            return Response({"error": "Invalid Session slug!"}, status=status.HTTP_400_BAD_REQUEST)
+
+        if Feedback(user=user, session=session).exists():
+            return Response({'error': 'Already filled!'}, status=status.HTTP_400_BAD_REQUEST)
+    
+        try:
+            instance = Feedback(session=session, user=user, param1=request.get('param1'), param2=request.get('param2'), param3=request.get('param3'))
+            instance.save()
+        except:
+            return Response(status=status.HTTP_400_BAD_REQUEST)
+        
+        return Response(status=status.HTTP_201_CREATED)
