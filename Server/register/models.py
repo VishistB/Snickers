@@ -18,18 +18,12 @@ class IdImage(models.Model):
     university = models.CharField(default='')
 
 
-GENDER_CHOICES = [
-    ('M', 'Male'),
-    ('F', 'Female'),
-    ('ND', 'Prefer Not to Say')
-]
-
 class User(AbstractBaseUser):
 
     email = models.EmailField(unique=True)
     name = models.CharField(max_length=150)
     phone_no = models.CharField(max_length=15)
-    gender = models.CharField(max_length=2, default='ND', choices=GENDER_CHOICES)
+    gender = models.CharField(max_length=50)
     dob = models.DateField(auto_now=False, auto_now_add=False)
 
     id_image = models.OneToOneField(IdImage, on_delete=models.CASCADE, null=True, blank=True, default=None)
