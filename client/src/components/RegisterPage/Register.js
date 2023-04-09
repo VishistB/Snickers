@@ -1,20 +1,19 @@
-import React from 'react'
-import styles from './register.module.css'
-import registerimg from '../../assets/89192-startup-man-in-front-of-phone-and-rocket@2x.png'
-import  { useState } from "react";
+import React, { useState } from 'react';
+import styles from './register.module.css';
+import registerimg from '../../assets/89192-startup-man-in-front-of-phone-and-rocket@2x.png';
 
-const api_url="https://learnify.visionofsid.com/api/auth/register/"
+const api_url = 'https://learnify.visionofsid.com/api/auth/register/';
 
 const Register = () => {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-  const [name, setName] = useState("");
-  const [phoneNo, setPhoneNo] = useState("");
-  const [country, setCountry] = useState("");
-  const [gender, setGender] = useState("");
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const [name, setName] = useState('');
+  const [phoneNo, setPhoneNo] = useState('');
+  const [country, setCountry] = useState('');
+  const [gender, setGender] = useState('');
   const [idImage, setIdImage] = useState(null);
-  const [company, setCompany] = useState("");
-  const [university, setUniversity] = useState("");
+  const [company, setCompany] = useState('');
+  const [university, setUniversity] = useState('');
 
   const handleEmailChange = (e) => {
     setEmail(e.target.value);
@@ -54,35 +53,31 @@ const Register = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+
     const formData = new FormData();
-    formData.append("email", email);
-    formData.append("password", password);
-    formData.append("name", name);
-    formData.append("phone_no", phoneNo);
-    formData.append("country", country);
-    formData.append("gender", gender);
-    formData.append("id_image", idImage);
-    formData.append("company", company);
-    formData.append("university", university);
+    formData.append('email', email);
+    formData.append('password', password);
+    formData.append('name', name);
+    formData.append('phone_no', phoneNo);
+    formData.append('country', country);
+    formData.append('gender', gender);
+    formData.append('id_image', idImage);
+    formData.append('company', company);
+    formData.append('university', university);
 
-    const response = await fetch(api_url, {
-      method: "POST",
-      body: formData,
-    });
-
-    if (response.ok) {
-      const response2 = await fetch("/auth/upload-id", {
-        method: "POST",
+    try {
+      const response = await fetch(api_url, {
+        method: 'POST',
         body: formData,
       });
 
-      if (response2.ok) {
-        console.log("Image uploaded successfully");
+      if (response.ok) {
+        console.log('Registration successful');
       } else {
-        console.log("Failed to upload image");
+        console.log('Registration failed');
       }
-    } else {
-      console.log("Registration failed");
+    } catch (error) {
+      console.log('Error:', error.message);
     }
   };
 
