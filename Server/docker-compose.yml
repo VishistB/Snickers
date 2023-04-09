@@ -1,0 +1,15 @@
+version: '3'
+
+services:
+  api:
+    image: snickers/learnify
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    ports: 
+      - "8376:8376"
+    volumes:
+      - ./static/:/app/static/
+      - ./logs/:/app/logs/
+      - ./media/:/app/media/
+    network_mode: host

@@ -1,12 +1,16 @@
 import React from 'react'
 import styles from './login.module.css'
-
+import loginimg from '../../assets/5437683-removebg-preview.png'
 
 function Login() {
     return (
         <>
+        
             <div className={styles.loginwrapper}>
                 <div className={styles.uinfocard}>
+               <img  src={loginimg}/> 
+            
+               
                 </div>
                 <div className={styles.dashboardoptions}>
                     <div className={styles.innerboardoptions}>
