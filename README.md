@@ -1,4 +1,4 @@
-#CORS
+### Learnify
 
 Learnify is a Learning and Productivity Platform
 which aims to eliminate loss of productivity and time 
