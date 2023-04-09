@@ -81,12 +81,15 @@ class LoginView(APIView):
         password = request.data.get('password')
 
         user = authenticate(email=email, password=password)
+
+        if user is None:
+            return Response({"error": 'Invalid Credentials!'}, status=status.HTTP_400_BAD_REQUEST)
         
         try:
             token = Token.objects.get(user=user)
             token.delete()
         except:
-            return Response({"error": 'Invalid Credentials!'}, status=status.HTTP_400_BAD_REQUEST)
+            pass
 
         token = Token.objects.get_or_create(user=user)
         return Response({
