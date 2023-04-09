@@ -2,6 +2,7 @@ import React from 'react'
 import styles from './studysession.module.css'
 import AddIcon from '@mui/icons-material/Add';
 import vec from '../../assets/89192-startup-man-in-front-of-phone-and-rocket@2x.png'
+import { Link } from "react-router-dom";
 
 function StudySession() {
     return (
@@ -10,10 +11,12 @@ function StudySession() {
             <div className={styles.bottomhalf}>
                 <div className={styles.lefthalf}>
                     <div className={styles.joinboxes}>
+                    <Link to="/Vidcall">
                         <div className={styles.joinbox}>
                             <h3>Join a study session</h3>
                             <AddIcon style={{fontSize:"50px", marginTop:"30px"}}/>
                         </div>
+                    </Link>
                         <div className={styles.joinbox}>
                             <h3>Create a study session</h3>
                             <AddIcon style={{fontSize:"50px", marginTop:"30px"}}/>
