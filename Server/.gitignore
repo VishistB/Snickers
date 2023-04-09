@@ -56,3 +56,10 @@ cert.pem
 
 #error logs
 logs
+
+#jobstore
+jobs.sqlite
+
+#redundant data
+input.csv
+output.csv

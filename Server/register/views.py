@@ -26,13 +26,13 @@ class IdUpload(APIView):
 
         file_name = instance.file.name
         
-        # try:
-        if key=='ST':
-            list = validate_student.validate(file_name)
-        else:
-            list = validate_professional.validate(file_name)
-        # except:
-        #     return Response({'error': 'Something went wrong!'}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
+        try:
+            if key=='ST':
+                list = validate_student.validate(file_name)
+            else:
+                list = validate_professional.validate(file_name)
+        except:
+            return Response({'error': 'Something went wrong!'}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
 
         instance.name = list['Name']
         if key=='ST':
@@ -86,7 +86,7 @@ class LoginView(APIView):
             token = Token.objects.get(user=user)
             token.delete()
         except:
-            pass
+            return Response({"error": 'Invalid Credentials!'}, status=status.HTTP_400_BAD_REQUEST)
 
         token = Token.objects.get_or_create(user=user)
         return Response({

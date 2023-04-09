@@ -92,3 +92,9 @@
     margin: 10px 0;
     margin-left: 8vw;
 }
+
+.img{
+    width: 50vw;
+    border-radius: 50%;
+    margin: 0 10px;
+}
