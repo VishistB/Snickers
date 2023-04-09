@@ -1,14 +1,24 @@
 .vidcallwrap{
     height: 100vh;
     width: 100vw;
-    /* margin-left: 4vw; */
+
     background: beige;
     display: flex;
 }
 .uservidscreen{
     height: 400px;
     width: 600px ;
+    scale: 0.7;
 }
-.counter{
+/* .counter{
     margin-left: 60vw;
+} */
+.outervidscreen{
+    position: static;
+    scale: 0.7;
+}
+.videoboxwrap{
+    height: 600px;
+    width: 600px;
+    background: #D9D9D9;
 }

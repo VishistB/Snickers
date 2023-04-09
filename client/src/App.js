@@ -6,27 +6,33 @@ import Navbar from './components/Navbar/Navbar';
 import Login from './components/LoginPage/Login';
 import { useState } from 'react';
 import Register from './components/RegisterPage/Register';
+import Topnav from './components/Navbar/Topnav';
+import StudySession from './components/Studysession/StudySession';
 
 
 
 
 function App() {
-  const [vidbool,setvidbool] = useState(false)
+  const [vidbool,setvidbool] = useState(true)
   return (
     <div className="App">
-      <button onClick={()=>setvidbool(!vidbool)} style={{margin:"0 auto", width:"100vw",height:"20px"}}/>
-      {vidbool?(
+      {/* <button onClick={()=>setvidbool(!vidbool)} style={{margin:"0 auto", width:"100vw",height:"20px"}}/> */}
+      {/* {vidbool?(
       <Vidcall/>):
       (
       <>  
+      <Topnav/>
       <Navbar/>
       <Dashboard/>
       <Login/>
       <Feedback/>
+      <Register/>
       </>
       )
-      }
-      <Register/>
+      } */}
+      <Topnav/>
+      <Navbar/>
+      <StudySession/>
     </div>
   );
 }
