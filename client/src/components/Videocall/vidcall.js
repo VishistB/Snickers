@@ -5,6 +5,7 @@ import ReactDOM from "react-dom";
 import Countdown from "react-countdown";
 
 
+
 const session_duration = 6;
 
 let timePast = parseInt(localStorage.getItem("timePast"));
@@ -12,7 +13,7 @@ if (!timePast) {
     timePast = timePast;
 }
 else{
-    timePast = timePast+1;
+    timePast = timePast-1;
 }
 
 
@@ -25,6 +26,10 @@ const client = AgoraRTC.createClient({ codec: "h264", mode: "rtc" });
 const localTracksState = { videoTrack: null, audioTrack: null };
 
 const Vidcall = () => {
+    const navigate=()=>{
+        window.location.href="/Feedback";
+    }
+
 
     const [remoteUsers, setRemoteUsers] = useState([]);
     const [localTracks, setLocalTracks] = useState(localTracksState);
@@ -110,6 +115,8 @@ const Vidcall = () => {
                         date={Date.now() + session_duration * 60 * 1000 - timePast}
                         onTick={timerTick}
                         onComplete={() => {
+                            
+                            navigate();
                             // Handle session completion here
                         }}
                     />

@@ -32,6 +32,7 @@ function App() {
                     <Route path="/Vidcall" element={<Vidcall/>} />
                     <Route path="/Login" element={<Login/>} />
                     <Route path="/Register" element={<Register/>} />
+                    <Route path="/Feedback" element={<Feedback/>} />
                 </Routes>
             </Router>
         </div>
