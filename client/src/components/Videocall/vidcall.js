@@ -6,15 +6,13 @@ import Countdown from "react-countdown";
 
 
 
-const session_duration = 6;
+const session_duration = 6000; //millisecs
 
 let timePast = parseInt(localStorage.getItem("timePast"));
 if (!timePast) {
-    timePast = timePast;
+    timePast = 0;
 }
-else{
-    timePast = timePast-1;
-}
+
 
 
 const appId = "7d2f6b401f8345ea9b0106cd9907839f";
@@ -112,7 +110,7 @@ const Vidcall = () => {
                 ))} */}
                 <div className={styles.counter}>
                     <Countdown 
-                        date={Date.now() + session_duration * 60 * 1000 - timePast}
+                        date={Date.now() + session_duration  - timePast}
                         onTick={timerTick}
                         onComplete={() => {
                             
