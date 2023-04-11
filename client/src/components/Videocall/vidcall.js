@@ -18,7 +18,7 @@ if (!timePast) {
 const appId = "7d2f6b401f8345ea9b0106cd9907839f";
 const channelName = "StudyVerse";
 const token =
-    "007eJxTYJip0f1B8Z10f2ZltLKqIOu2nKAvwQZcD2YzzKn/VX9WmEGBwTzFKM0sycTAMM3C2MQ0NdEyycDQwCw5xdLSwNzC2DIte6NhSkMgI8PpdV0MjFAI4nMxBJeUplSGpRYVpzIwAABOkx+l"; 
+    "007eJxTYJip0f1B8Z10f2ZltLKqIOu2nKAvwQZcD2YzzKn/VX9WmEGBwTzFKM0sycTAMM3C2MQ0NdEyycDQwCw5xdLSwNzC2DIte6NhSkMgI8PpdV0MjFAI4nMxBJeUplSGpRYVpzIwAABOkx+l";
 
 const client = AgoraRTC.createClient({ codec: "h264", mode: "rtc" });
 const localTracksState = { videoTrack: null, audioTrack: null };
@@ -29,8 +29,11 @@ const Vidcall = () => {
     }
 
 
+const Vidcall = () => {
     const [remoteUsers, setRemoteUsers] = useState([]);
     const [localTracks, setLocalTracks] = useState(localTracksState);
+
+    const [isSessionOver, setIsSessionOver] = useState(false);
 
     useEffect(() => {
         (async () => {
@@ -56,6 +59,9 @@ const Vidcall = () => {
                         prevRemoteUsers.filter((u) => u !== user)
                     );
                 });
+                if(isSessionOver){
+                    localTracks.videoTrack.stop();
+                }
             } catch (error) {
                 console.error(error);
             }
@@ -69,7 +75,10 @@ const Vidcall = () => {
         timePast += 1000;
         localStorage.setItem("timePast", timePast);
     };
-
+    const timeendtrig = () => {
+        setIsSessionOver(true);
+         // stop the video when session is over
+    };
     useEffect(() => {
         const handleVisibilityChange = () => {
             if (document.visibilityState === "visible") {
@@ -80,10 +89,13 @@ const Vidcall = () => {
         document.addEventListener("visibilitychange", handleVisibilityChange);
 
         return () => {
-            document.removeEventListener("visibilitychange", handleVisibilityChange);
+            document.removeEventListener(
+                "visibilitychange",
+                handleVisibilityChange
+            );
         };
     }, []);
-
+    
     return (
         <div className={styles.vidcallwrap}>
             <div>
@@ -109,6 +121,8 @@ const Vidcall = () => {
                     </div>
                 ))} */}
                 <div className={styles.counter}>
+
+
                     <Countdown 
                         date={Date.now() + session_duration  - timePast}
                         onTick={timerTick}
@@ -117,6 +131,7 @@ const Vidcall = () => {
                             navigate();
                             // Handle session completion here
                         }}
+
                     />
                 </div>
             </div>

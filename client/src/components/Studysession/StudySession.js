@@ -7,6 +7,7 @@ import { Link } from "react-router-dom";
 function StudySession() {
     return (
         <div className={styles.stusessionwrap}>
+            <div className={styles.wrapinner}>
             <h1 className={styles.mainheader}>Study Session</h1>
             <div className={styles.bottomhalf}>
                 <div className={styles.lefthalf}>
@@ -36,6 +37,7 @@ function StudySession() {
                         <p>No Tab Switching</p>
                     </div>
                 </div>
+            </div>
             </div>
         </div>
     )

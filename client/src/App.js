@@ -28,7 +28,8 @@ function App() {
                 <Topnav/><Dashboard/></>} />
                     <Route path="/home" element={<><Navbar/>
                 <Topnav/><StudySession/></>} />
-                    <Route path="/StudySession" element={<StudySession/>} />
+                    <Route path="/StudySession" element={<><Navbar/>
+                <Topnav/><StudySession/></>} />
                     <Route path="/Vidcall" element={<Vidcall/>} />
                     <Route path="/Login" element={<Login/>} />
                     <Route path="/Register" element={<Register/>} />
