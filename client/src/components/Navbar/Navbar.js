@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 const Navbar = () => {
   return (
     <nav className={styles.navbar}>
-      <img src={logo} style={{width:"52px", margin:"0 auto"}}/>
+      <img src={logo} style={{width:"50px", margin:"5px auto"}}/>
       <ul className={styles.navbarnav}>
         <li className={styles.navitem}>
           <a href="#" className={styles.navlink}>

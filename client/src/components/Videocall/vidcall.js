@@ -23,17 +23,17 @@ const token =
 const client = AgoraRTC.createClient({ codec: "h264", mode: "rtc" });
 const localTracksState = { videoTrack: null, audioTrack: null };
 
-const Vidcall = () => {
-    const navigate=()=>{
-        window.location.href="/Feedback";
-    }
+
 
 
 const Vidcall = () => {
     const [remoteUsers, setRemoteUsers] = useState([]);
     const [localTracks, setLocalTracks] = useState(localTracksState);
-
+    
     const [isSessionOver, setIsSessionOver] = useState(false);
+    const navigate=()=>{
+        window.location.href="/Feedback";
+    }
 
     useEffect(() => {
         (async () => {

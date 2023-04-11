@@ -25,15 +25,18 @@ function App() {
                 <Routes>
                     <Route exact path="/" element={<Landing/>} />
                     <Route path="/Dashboard" element={<><Navbar/>
-                <Topnav/><Dashboard/></>} />
+                    <Topnav/><Dashboard/></>} />
                     <Route path="/home" element={<><Navbar/>
-                <Topnav/><StudySession/></>} />
+                    <Topnav/><StudySession/></>} />
                     <Route path="/StudySession" element={<><Navbar/>
-                <Topnav/><StudySession/></>} />
+                    <Topnav/><StudySession/></>} />
                     <Route path="/Vidcall" element={<Vidcall/>} />
-                    <Route path="/Login" element={<Login/>} />
+
+                    <Route path="/Login" element={<><Navbar/>
+                    <Topnav/><Login/></>} />
                     <Route path="/Register" element={<Register/>} />
                     <Route path="/Feedback" element={<Feedback/>} />
+
                 </Routes>
             </Router>
         </div>
