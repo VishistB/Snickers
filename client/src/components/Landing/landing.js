@@ -22,7 +22,7 @@ function Landing() {
                 backgroundImage: `url(${backgroundImage})`,
                 backgroundSize: "cover",
             }}
-        
+        >
             <div className={styles.tempnav}>
                 <img src={logo} style={{ height: "50px", borderRadius:"3px", margin:"0 0 0 2vw"}} />
                 <ul className={styles.navbarnav}>
