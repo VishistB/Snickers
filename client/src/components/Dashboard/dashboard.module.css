@@ -1,8 +1,9 @@
+
 .dashboardwrap{
     display: flex;
     background: #FFF1DC;
     width: 96vw;
-    height: 100vh;
+    min-height: 140vh;
     justify-content: space-around;
     align-items: center;
     margin-left: 4vw;
@@ -12,6 +13,7 @@
     width: 350px;
     height: 80%;
     border-radius: 10px;
+    margin-top: 40px;
 }
 .picneditprof{
     display: flex;
@@ -23,6 +25,7 @@
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
+    text-align: center;
 }
 .learningstat{
     display: flex;
@@ -34,17 +37,21 @@
     margin: 0;
 }
 .editbtn{
+    margin: 8px auto;
     background: #53917E;
     width: 180px;
     font-size: 1.3rem;
     color: #FFF5F5;
     border: none;
+    border-radius: 10px;
+    padding: 4px;
 }
 .statitem{
     display: flex;
     width: 90%;
-    justify-content: space-around;
+    justify-content: start;
     align-items: center;
+    gap: 20px;
 
 }
 .dashboardoptions{
@@ -60,15 +67,22 @@
     height: 80%;
 }
 .innerboardoptions{
-    width: 88%;
+    width: 90%;
     margin: 0 auto;
 }
-.msessions{
-    background: #FFFFFF;
-    width: 100%;
-    height: 10%;
+.head_sessions{
     display: flex;
+    align-items: center;
     justify-content: space-between;
+}
+.msessions{
+    position: relative;
+    background: #FFFFFF;
+    width: 110%;
+    height: 13%;
+    display: flex;
+    /* justify-content: space-between; */
+    gap:4%;
     border-radius: 10px;
     margin: 20px 0;
     box-shadow: rgba(30, 29, 29, 0.334) 0px 5px 5px;
@@ -80,12 +94,20 @@
     margin: auto 2%;
     border-radius: 5px;
 }
+.time1{
+    position:absolute;
+    bottom: -12%;
+    right: 2%;  
+    font-size: 0.9rem;
+}
 .studyrooms{
+    position: relative;
     background: #FFFFFF;
-    width: 100%;
-    height: 10%;
+    width: 110%;
+    height: 13%;
     display: flex;
-    justify-content: space-between;
+    /* justify-content: space-between; */
+    gap:4%;
     border-radius: 10px;
     margin: 20px 0;
     box-shadow: rgba(30, 29, 29, 0.334) 0px 5px 5px;
@@ -97,6 +119,18 @@
     margin: auto 2%;
     border-radius: 5px;
 }
+.skills{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+}
+/* .skills_inner{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+} */
 .receresource{
     display: flex;
     flex-direction: column;
@@ -105,6 +139,7 @@
 .recerespics{
     display: flex;
     margin: 10px 0 0 0;
+    gap: 10%;
 }
 .filterwrap{
     /* height: 35px; */
@@ -115,6 +150,7 @@
 }
 .receimage{
     height: 220px;
+    width: 200px;  
     margin: 0 5px;
     border-radius: 10px ;
 }
@@ -148,7 +184,6 @@
     border-bottom: rgba(30, 29, 29, 0.334) 0.1px solid;
 }
 .profilecircle{
-    background: black;
     width: 75px;
     height: 75px;
     border-radius: 50%;

@@ -10,6 +10,7 @@
     margin-top: rgba(30, 29, 29, 0.334) solid 1;
     margin-bottom: rgba(30, 29, 29, 0.334) solid 1;
     box-shadow: 0 0 5px 0;
+    z-index: 10;
 }
 .topnavright{
     height: 100%;

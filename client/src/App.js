@@ -10,14 +10,18 @@ import Topnav from "./components/Navbar/Topnav";
 import StudySession from "./components/Studysession/StudySession";
 import Landing from "./components/Landing/landing";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import useToken from "./useToken";
+
 
 
 function App() {
-    const [vidbool, setvidbool] = useState(true);
+    const [vidbool, setVidbool] = useState(true);
+ 
+    
+    
     return (
         <div className="App">
             <Router>
-                
                 <Routes>
                     <Route exact path="/" element={<Landing/>} />
                     <Route path="/Dashboard" element={<><Navbar/>
@@ -28,7 +32,8 @@ function App() {
                 <Topnav/><StudySession/></>} />
                     <Route path="/Vidcall" element={<Vidcall/>} />
                     <Route path="/Login" element={<Login/>} />
-                    <Route path="/t" element={<Register/>} />
+                    <Route path="/Register" element={<Register/>} />
+                    <Route path="/Feedback" element={<Feedback/>} />
                 </Routes>
             </Router>
         </div>

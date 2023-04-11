@@ -49,8 +49,29 @@ Install dependencies
   pip install -r requirements.txt
 ```
 
-Make sure you have installed PostgreSQL
+Make sure you have installed PostgreSQL  
 
+Run the following commands in psql shell:  
+```
+psql postgres
+```
+Create a new database for your Django project:
+```
+CREATE DATABASE snickers;
+```
+Create a new user with a password:
+```
+CREATE USER username WITH PASSWORD 'your_pass';
+```
+Grant all privileges on the database to the user:
+
+```
+GRANT ALL PRIVILEGES ON DATABASE snickers TO username;
+```
+Exit the Postgres shell:
+```
+\q
+```
 Create *.env file* in base directory and place Security-Key and Database credentials.
 
 Run Migrations
