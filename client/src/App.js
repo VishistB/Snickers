@@ -27,7 +27,8 @@ function App() {
                     <Route path="/StudySession" element={<><Navbar/>
                 <Topnav/><StudySession/></>} />
                     <Route path="/Vidcall" element={<Vidcall/>} />
-                    <Route path="/Login" element={<Login/>} />
+                    <Route path="/Login" element={<><Navbar/>
+                <Topnav/><Login/></>} />
                     <Route path="/t" element={<Register/>} />
                 </Routes>
             </Router>
