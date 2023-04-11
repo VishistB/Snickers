@@ -2,15 +2,19 @@ import React from "react";
 import styles from "./Landingstyle.module.css";
 import logo from "../../assets/LEARNIFY_LOGO.png";
 import { Link } from "react-router-dom";
-import {
-    FaHome,
-    FaUserFriends,
-    FaBook,
-    FaPuzzlePiece,
-    FaEnvelope,
-} from "react-icons/fa";
-import backgroundImage from "../../assets/13_1.png";
+
+import { FaHome, FaUserFriends, FaBook, FaPuzzlePiece, FaEnvelope } from 'react-icons/fa';
+import backgroundImage from '../../assets/13_1.png';
+import {Routes, Route, useNavigate} from 'react-router-dom';
+
+
 function Landing() {
+    const navigate = useNavigate();
+
+    const navigatelogin = () => {
+        navigate('/Login');
+      };
+
     return (
         <div
             className={styles.landingwrap}
@@ -18,7 +22,7 @@ function Landing() {
                 backgroundImage: `url(${backgroundImage})`,
                 backgroundSize: "cover",
             }}
-        >
+        
             <div className={styles.tempnav}>
                 <img src={logo} style={{ height: "50px", borderRadius:"3px", margin:"0 0 0 2vw"}} />
                 <ul className={styles.navbarnav}>
@@ -54,13 +58,11 @@ function Landing() {
 
             <div className={styles.mainlandingwrap}>
                 <div className={styles.mainheaders}>
-                    <h1 className={styles.massivetext}>LEARNIFY</h1>
-                    <h1 className={styles.submassivetext}>
-                        REVOLUTIONISING EDUCATION
-                    </h1>
-                    <Link to="/Login">
-                        <button className={styles.loginbtn}>SIGN UP</button>
-                    </Link>
+
+                <h1 className={styles.massivetext}>LEARNIFY</h1>
+                <h1 className={styles.submassivetext}>REVOLUTIONISING EDUCATION</h1>
+                <button className={styles.loginbtn} onClick={navigatelogin}>LOGIN !</button>
+
                 </div>
             </div>
             <div className={styles.secondlandingwrap}>

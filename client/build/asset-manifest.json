@@ -1,20 +1,21 @@
 {
   "files": {
-    "main.css": "/static/css/main.734d2112.css",
-    "main.js": "/static/js/main.733e4a32.js",
+    "main.css": "/static/css/main.17459c45.css",
+    "main.js": "/static/js/main.5110bcc4.js",
     "static/js/787.c4e7f8f9.chunk.js": "/static/js/787.c4e7f8f9.chunk.js",
     "static/media/5437683-removebg-preview.png": "/static/media/5437683-removebg-preview.cf50ae48509c305d2863.png",
     "static/media/89192-startup-man-in-front-of-phone-and-rocket@2x.png": "/static/media/89192-startup-man-in-front-of-phone-and-rocket@2x.53919f0cfed187518233.png",
     "static/media/logo1-removebg-preview.png": "/static/media/logo1-removebg-preview.96e679a7e205ec65739f.png",
     "static/media/L.jpg": "/static/media/L.60f7f08b7f617bc6679f.jpg",
+    "static/media/L-removebg-preview.png": "/static/media/L-removebg-preview.594ac6f1947d974dec33.png",
     "static/media/2.jpg": "/static/media/2.c4f50291c916ca9638f1.jpg",
     "index.html": "/index.html",
-    "main.734d2112.css.map": "/static/css/main.734d2112.css.map",
-    "main.733e4a32.js.map": "/static/js/main.733e4a32.js.map",
+    "main.17459c45.css.map": "/static/css/main.17459c45.css.map",
+    "main.5110bcc4.js.map": "/static/js/main.5110bcc4.js.map",
     "787.c4e7f8f9.chunk.js.map": "/static/js/787.c4e7f8f9.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.734d2112.css",
-    "static/js/main.733e4a32.js"
+    "static/css/main.17459c45.css",
+    "static/js/main.5110bcc4.js"
   ]
 }

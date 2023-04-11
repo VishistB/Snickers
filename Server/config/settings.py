@@ -43,7 +43,6 @@ INSTALLED_APPS = [
     'rest_framework',
     'rest_framework.authtoken',
     'import_export',
-    'corsheaders',
 
     'register',
     'session',
@@ -173,5 +172,3 @@ LOGGING = {
         },
     },
 }
-
-CORS_ALLOW_ALL_ORIGINS = True

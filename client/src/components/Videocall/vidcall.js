@@ -5,11 +5,15 @@ import ReactDOM from "react-dom";
 import Countdown from "react-countdown";
 
 
+
+const session_duration = 6000; //millisecs
+
 let timePast = parseInt(localStorage.getItem("timePast"));
 if (!timePast) {
     timePast = 0;
 }
-const session_duration = 1;
+
+
 
 const appId = "7d2f6b401f8345ea9b0106cd9907839f";
 const channelName = "StudyVerse";
@@ -20,11 +24,16 @@ const client = AgoraRTC.createClient({ codec: "h264", mode: "rtc" });
 const localTracksState = { videoTrack: null, audioTrack: null };
 
 
+
+
 const Vidcall = () => {
     const [remoteUsers, setRemoteUsers] = useState([]);
     const [localTracks, setLocalTracks] = useState(localTracksState);
-
+    
     const [isSessionOver, setIsSessionOver] = useState(false);
+    const navigate=()=>{
+        window.location.href="/Feedback";
+    }
 
     useEffect(() => {
         (async () => {
@@ -112,13 +121,17 @@ const Vidcall = () => {
                     </div>
                 ))} */}
                 <div className={styles.counter}>
-                    <Countdown
-                        date={
-                            Date.now() + session_duration * 60 * 1000 - timePast
-                        }
+
+
+                    <Countdown 
+                        date={Date.now() + session_duration  - timePast}
                         onTick={timerTick}
-                        onComplete={timeendtrig}
-                        // Handle session completion here
+                        onComplete={() => {
+                            
+                            navigate();
+                            // Handle session completion here
+                        }}
+
                     />
                 </div>
             </div>
