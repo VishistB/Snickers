@@ -1,9 +1,9 @@
 .landingwrap{
-    min-height: 100vh;
-    width: 100vw;
+    min-height: 200vh;
+    /* width: 100vw; */
 }
 .tempnav{
-    height: 5vw;
+    min-height: 10vh;
     background: #F5D6BA;
     display: flex;
     justify-content: space-between;
@@ -11,32 +11,27 @@
     box-shadow: 0 0 5px 0;
 }
 .navicon{
-    font-size: 25px;
-    margin: auto;
+    font-size: 30px;
+    /* margin:  auto; */
     color: #000;
   }
   .navbarnav {
     list-style: none;
-    margin: 10px 0 0 0;
-    padding: 0;
+    /* margin: auto 0; */
+    margin-right: 2vw;
     display: flex;
   }
   
-  /* .navitem {
-    margin: auto;
-  } */
-  
-  .navlink {
+  .navitem {
+    margin: 0 10px;
     display: flex;
+    justify-content: center;
     align-items: center;
-    color: #fff;
-    text-decoration: none;
-    /* padding: 10px; */
-    border-radius: 5px;
+    padding: 2px;
   }
-  
-  .navlink:hover {
-    background-color: #333;
+  .navitem:hover {
+    background: #fff;
+    
   }
   
   .linktext {
@@ -46,15 +41,16 @@
   }
 
 .mainlandingwrap{
-    width: 100vw;
+    /* width: 100vw; */
     height: 75vh;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 .secondlandingwrap{
-    width: 100vw;
-    height: 100vh;
+    /* width: 100vw; */
+    min-height: 75vh;
+    display: flex;
 }
 .mainheaders{
     display: flex;
@@ -74,12 +70,20 @@
     font-size: 1.2rem;
     width: 150px;
     height: 40px ;
+    cursor: pointer;
+    transition: 0.5s all;
+    box-shadow: rgba(30, 29, 29, 0.334) 0px 5px 5px;
+}
+.loginbtn:hover{
+  background: #0bd3da;
+  box-shadow: rgba(30, 29, 29, 0.334) 5px 10px 5px;
 }
 .darkwrap{
     background: #223843;
-    width: 90%;
-    height: 90%;
+    width: 95%;
+    min-height: 500px ;
     margin: 0 auto;
+    padding: 1px 0;
     display: flex;
     flex-direction:column ;
     /* justify-content: center; */
@@ -91,8 +95,29 @@
 }
 .yellowcnt{
     width: 80%;
-    height: 20%;
+    height: 200px;
     background-color: #FFF1DC;
     border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.yellowcntpara{
+  width: 80%;
+  text-align: center;
+  font-size: 1.5rem;
+  
+}
+.services{
+  width: 85%;
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 80px ;
+}
+.servicebox{
+  height: 275px;
+  width: 275px;
+  background: white;
+  border-radius: 10px ;
 }
   
