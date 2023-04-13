@@ -33,6 +33,7 @@ const Vidcall = () => {
     const [isSessionOver, setIsSessionOver] = useState(false);
     const navigate=()=>{
         window.location.href="/Feedback";
+        localStorage.removeItem("mytime");
     }
 
     useEffect(() => {

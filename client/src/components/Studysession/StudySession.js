@@ -1,7 +1,7 @@
 import React from 'react'
 import styles from './studysession.module.css'
 import AddIcon from '@mui/icons-material/Add';
-import vec from '../../assets/89192-startup-man-in-front-of-phone-and-rocket@2x.png'
+import vec from '../../assets/StudySessionVector.png'
 import { Link } from "react-router-dom";
 
 function StudySession() {
@@ -27,7 +27,7 @@ function StudySession() {
                             <AddIcon style={{fontSize:"50px", marginTop:"30px"}}/>
                         </div>
                     </div>
-                    <img src={vec} style={{width:"350px"}}/>
+                    <img src={vec} style={{height:"350px",marginTop:"2vh"}}/>
                 </div>
                 
                 <div className={styles.righthalf}>

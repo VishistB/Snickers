@@ -6,7 +6,9 @@ import { Link } from "react-router-dom";
 import { FaHome, FaUserFriends, FaBook, FaPuzzlePiece, FaEnvelope } from 'react-icons/fa';
 import backgroundImage from '../../assets/13_1.png';
 import {Routes, Route, useNavigate} from 'react-router-dom';
-
+import mentorship from '../../assets/mentorship.png';
+import studygrp from '../../assets/studygrp.png';
+import Bookshome from '../../assets/BooksHome.png';
 
 function Landing() {
     const navigate = useNavigate();
@@ -61,7 +63,7 @@ function Landing() {
 
                 <h1 className={styles.massivetext}>LEARNIFY</h1>
                 <h1 className={styles.submassivetext}>REVOLUTIONISING EDUCATION</h1>
-                <button className={styles.loginbtn} onClick={navigatelogin}>LOGIN !</button>
+                <button className={styles.loginbtn} onClick={navigatelogin}>LOGIN</button>
 
                 </div>
             </div>
@@ -79,9 +81,21 @@ function Landing() {
                     </div>
                     <h2 className={styles.abtushead}>WHAT WE OFFER?</h2>
                     <div className={styles.services}>
-                        <div className={styles.servicebox}></div>
-                        <div className={styles.servicebox}></div>
-                        <div className={styles.servicebox}></div>
+                        <div className={styles.servicebox}>
+                            <h3>STUDY SQUAD</h3>
+                            <p>CREATE OR JOIN STUDY ROOMS,<br/>AND STUDY TOGETHER</p>
+                            <img src={studygrp} className={styles.serviceboximg}/>
+                        </div>
+                        <div className={styles.servicebox}>
+                            <h3>STUDY SQUAD</h3>
+                            <p>CREATE OR JOIN STUDY ROOMS,<br/>AND STUDY TOGETHER</p>
+                            <img src={Bookshome} className={styles.serviceboximg}/>
+                        </div>
+                        <div className={styles.servicebox}>
+                        <h3>STUDY SQUAD</h3>
+                            <p>CREATE OR JOIN STUDY ROOMS,<br/>AND STUDY TOGETHER</p>
+                            <img src={mentorship} className={styles.serviceboximg}/>
+                        </div>
                     </div>
                 </div>
             </div>

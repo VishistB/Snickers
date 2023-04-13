@@ -119,5 +119,13 @@
   width: 275px;
   background: white;
   border-radius: 10px ;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.serviceboximg{
+  height: 140px;
 }
   
