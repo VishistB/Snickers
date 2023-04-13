@@ -1,5 +1,5 @@
 .stusessionwrap{
-    height: 100vh;
+    min-height: 100vh;
     background: #FFF1DC;
     display: flex;
     flex-direction: column;
