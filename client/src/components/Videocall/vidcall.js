@@ -3,8 +3,7 @@ import AgoraRTC from "agora-rtc-sdk-ng";
 import styles from "./vidcall.module.css";
 import ReactDOM from "react-dom";
 import Countdown from "react-countdown";
-
-
+import backgroundImage from '../../assets/13_1.png';
 
 const session_duration = 6000; //millisecs
 
@@ -13,28 +12,23 @@ if (!timePast) {
     timePast = 0;
 }
 
-
-
 const appId = "7d2f6b401f8345ea9b0106cd9907839f";
 const channelName = "StudyVerse";
 const token =
-    "007eJxTYJip0f1B8Z10f2ZltLKqIOu2nKAvwQZcD2YzzKn/VX9WmEGBwTzFKM0sycTAMM3C2MQ0NdEyycDQwCw5xdLSwNzC2DIte6NhSkMgI8PpdV0MjFAI4nMxBJeUplSGpRYVpzIwAABOkx+l";
+    "007eJxTYAhWPrd8iQab9/+w4pIe0Rf2drvP9ezcIFvZN+NWWYGbXpsCg3mKUZpZkomBYZqFsYlpaqJlkoGhgVlyiqWlgbmFsWXae1eLlIZARoZDGpNZGBkgEMTnYgguKU2pDEstKk5lYAAA3BchDA==";
 
 const client = AgoraRTC.createClient({ codec: "h264", mode: "rtc" });
 const localTracksState = { videoTrack: null, audioTrack: null };
 
-
-
-
 const Vidcall = () => {
     const [remoteUsers, setRemoteUsers] = useState([]);
     const [localTracks, setLocalTracks] = useState(localTracksState);
-    
+
     const [isSessionOver, setIsSessionOver] = useState(false);
-    const navigate=()=>{
-        window.location.href="/Feedback";
+    const navigate = () => {
+        window.location.href = "/Feedback";
         localStorage.removeItem("mytime");
-    }
+    };
 
     useEffect(() => {
         (async () => {
@@ -60,7 +54,7 @@ const Vidcall = () => {
                         prevRemoteUsers.filter((u) => u !== user)
                     );
                 });
-                if(isSessionOver){
+                if (isSessionOver) {
                     localTracks.videoTrack.stop();
                 }
             } catch (error) {
@@ -78,12 +72,12 @@ const Vidcall = () => {
     };
     const timeendtrig = () => {
         setIsSessionOver(true);
-         // stop the video when session is over
+        // stop the video when session is over
     };
     useEffect(() => {
         const handleVisibilityChange = () => {
             if (document.visibilityState === "visible") {
-                alert("Tab switched Let's not get distracted shall we?");
+                // alert("Tab switched Let's not get distracted shall we?");
             }
         };
 
@@ -96,10 +90,15 @@ const Vidcall = () => {
             );
         };
     }, []);
-    
+
     return (
-        <div className={styles.vidcallwrap}>
-            <div>
+        <div className={styles.vidcallwrap}
+        style={{
+            backgroundImage: `url(${backgroundImage})`,
+            backgroundSize: "cover",
+        }}
+        >
+            <div className={styles.sessionwrap}>
                 <p>SESSION LIVE</p>
                 {localTracks.videoTrack ? (
                     <div className={styles.videoboxwrap}>
@@ -115,24 +114,16 @@ const Vidcall = () => {
                 )}
             </div>
             <div className={styles.counterwrap}>
-                {/* {remoteUsers.map((user) => (
-                    <div key={user.uid}>
-                        <p>Remote User {user.uid}</p>
-                        <div ref={(v) => v && user.videoTrack.play(v)} />
-                    </div>
-                ))} */}
                 <div className={styles.counter}>
-
-
                     <Countdown 
                         date={Date.now() + session_duration  - timePast}
                         onTick={timerTick}
                         onComplete={() => {
-                            
-                            navigate();
+                        
+                            // navigate();
                             // Handle session completion here
                         }}
-
+                        // onStart={}
                     />
                 </div>
             </div>

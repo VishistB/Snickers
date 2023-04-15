@@ -82,19 +82,25 @@ function Landing() {
                     <h2 className={styles.abtushead}>WHAT WE OFFER?</h2>
                     <div className={styles.services}>
                         <div className={styles.servicebox}>
+                            <div>
                             <h3>STUDY SQUAD</h3>
-                            <p>CREATE OR JOIN STUDY ROOMS,<br/>AND STUDY TOGETHER</p>
+                            <p className={styles.subtext}>CREATE OR JOIN STUDY ROOMS,<br/>AND STUDY TOGETHER</p>
                             <img src={studygrp} className={styles.serviceboximg}/>
+                            </div>
                         </div>
                         <div className={styles.servicebox}>
+                            <div>
                             <h3>STUDY SQUAD</h3>
-                            <p>CREATE OR JOIN STUDY ROOMS,<br/>AND STUDY TOGETHER</p>
+                            <p className={styles.subtext}>CREATE OR JOIN STUDY ROOMS,<br/>AND STUDY TOGETHER</p>
                             <img src={Bookshome} className={styles.serviceboximg}/>
+                            </div>
                         </div>
                         <div className={styles.servicebox}>
-                        <h3>STUDY SQUAD</h3>
-                            <p>CREATE OR JOIN STUDY ROOMS,<br/>AND STUDY TOGETHER</p>
+                            <div >
+                            <h3>STUDY SQUAD</h3>
+                            <p className={styles.subtext}>CREATE OR JOIN STUDY ROOMS,<br/>AND STUDY TOGETHER</p>
                             <img src={mentorship} className={styles.serviceboximg}/>
+                            </div>
                         </div>
                     </div>
                 </div>
