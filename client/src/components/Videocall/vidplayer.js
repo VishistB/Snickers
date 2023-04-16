@@ -1,19 +1,20 @@
 import React, { useEffect, useRef } from 'react';
+import styles from './vidcall.module.css'
 
-function Vplayer(user) {
-    const ref = useRef();
+export const VideoPlayer = ({ user }) => {
+  const ref = useRef();
 
-    useEffect(() => {
-        user.videoTrack.play(ref.current);
-    }, []);
-    return (
-        <div>
-            Uid: {user.uid}
-            <div ref={ref} style={{ width: "200px", height: "200px" }}>
-                HI
-            </div>
-        </div>
-    );
-}
+  useEffect(() => {
+    user.videoTrack.play(ref.current);
+  }, []);
 
-export default Vplayer;
+  return (
+    <div className={styles.videocontainer}>
+      <div
+        ref={ref}
+        style={{ width: '100%', height: '90%' }}
+        ></div>
+        Uid: {user.uid}
+    </div>
+  );
+};

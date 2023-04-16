@@ -27,17 +27,27 @@
     border-radius: 10px;
 }
 .videoboxwrap{
-    height: 600px;
+    height: 80%;
     width: 100%;
+    margin: 10px 0 10px 20px;
     /* background: #D9D9D9; */
     background: #223843;
     
     border-radius: 10px;
     /* border: solid 2px black; */
 }
-
+.videocontainer{
+    margin: 10px;
+    color: aliceblue;
+    background: black;
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    height: 200px;
+    text-align: center;
+}
 .timer{
-    margin-left: 60vw;
+    margin-left: 50vw;
 }
 .counterwrap{
     width: 50%;
